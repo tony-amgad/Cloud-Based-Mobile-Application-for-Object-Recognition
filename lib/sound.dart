@@ -153,14 +153,6 @@ class _ImageAndSoundState extends State<ImageAndSound> {
     }
     return index;
   }
-  //Open the URL in a new window inside the application to access Google search API 
-  // launchURL(String url) async {
-  //   if (await canLaunch(url)) {
-  //     await launch(url, forceWebView: true, enableJavaScript: true);
-  //   } else {
-  //     throw 'Could not launch $url';
-  //   }
-  // }
 
   Future<void> _launchInApp(Uri url) async {
     if (!await launchUrl(
