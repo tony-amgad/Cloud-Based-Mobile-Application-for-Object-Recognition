@@ -33,11 +33,9 @@ class Yolo():
 
     def get_json(self):
         df = self.results.pandas().xyxy[0]
-        start = time.time()
         del df['confidence']
         del df['class']
         df = df.apply(lambda x: round(x) if x.name in ['xmin','ymin', 'xmax', 'ymax'] else x)
-        print(time.time()-start)
         json = df.to_json(orient="records")
         return json
 
